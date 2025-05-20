@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let valortotalConta;
+      let numeroDePessoa;
+
+      while (true) {
+        valortotalConta = parseFloat(prompt("Coloque o valor total da conta;"));
+        numeroDePessoa = parseInt(
+          prompt("Quantidade de pessoas que irá pagar a conta;")
+        );
+
+        if (isNaN(valortotalConta) || isNaN(numeroDePessoa)) {
+          alert("Coloque o valor e o numero correto de clientes");
+        } else {
+          break;
+        }
+      }
+      let porpessoa = valortotalConta / numeroDePessoa;
+
+      alert("O valor por pessoa é "+porpessoa);
+
+    </script>
+  </body>
+</html>
