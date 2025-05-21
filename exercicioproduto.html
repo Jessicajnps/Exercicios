@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Produtos</title>
+</head>
+<body>
+
+<script>
+    let produto = parseInt(prompt("Insira o código do produto:"));
+    let resultado = "";
+
+    switch (produto) {
+        case 1:
+            resultado = "Alimento não perecível";
+            break;
+        case 2:
+        case 3:
+        case 4:
+            resultado = "Alimento perecível";
+            break;
+        case 5:
+        case 6:
+            resultado = "Higiene Pessoal";
+            break;
+        case 7:
+            resultado = "Vestimenta";
+            break;
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+            resultado = "Limpeza e Utensílios Domésticos";
+            break;
+        default:
+            resultado = "Código inválido";
+    }
+
+    alert("O resultado é: " + resultado);
+</script>
+
+</body>
+</html

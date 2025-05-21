@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+</head>
+<body>
+                <script>
+                                let menu = parseInt(prompt("            *Menu*\nDigite o numero do seu pedido:\n 100: Cachorro quente R$ 1,70\n101: Bauru Simples R$ 2,80\n 102: Bauru com ovo R$ 2,60\n 103:Hamburgue: R$ 2,40\n104: Cheeseburgue R$ 2,50\n 105: Refrigerante R$ 1,00 "));
+                let quantidade = parseInt(prompt("Qual a quantidade desejada."));
+                let precoUnitario;
+                let precoTotal;
+                
+                switch (menu){
+case 100:
+                precoUnitario=1,70;
+                precoTotal= precoUnitario*quantidade;
+                alert ("Voce comprou  " +quantidade+ "Cachorros Quentes, pagando o valor de R$ "+ precoTotal);
+                break;
+
+case 101:
+
+                precoUnitario=2,80;
+                precoTotal= precoUnitario*quantidade;
+                alert ("Voce comprou  " +quantidade+ "Bauru Simples, pagando o valor de R$ "+ precoTotal);
+                break;
+case 102:
+
+                precoUnitario=2,40;
+                precoTotal= precoUnitario*quantidade;
+                alert ("Voce comprou  " +quantidade+ "Hamburgue, pagando o valor de R$ "+ precoTotal);
+                break;
+
+case 103:
+
+                precoUnitario=2,40;
+                precoTotal= precoUnitario*quantidade;
+                alert ("Voce comprou  " +quantidade+ "Hamburgue, pagando o valor de R$ "+ precoTotal);
+                break;
+
+case 104:
+
+                precoUnitario=2,50;
+                precoTotal= precoUnitario*quantidade;
+                alert ("Voce comprou " +quantidade+ "Cheeseburgue, pagando o valor de R$ "+ precoTotal);
+                break;
+
+case 105:
+
+                precoUnitario=1,50;
+                precoTotal= precoUnitario*quantidade;
+                alert ("Voce comprou  " + quantidade + "Refrigerante, pagando o valor de R$ "+ precoTotal);
+                break;
+
+default:
+                alert("Escolha uma das opções Validas")
+
+                }
+
+                </script>
+                
+</body>
+</html>

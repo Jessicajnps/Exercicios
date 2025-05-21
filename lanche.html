@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <script>
+        // Preços dos itens
+        const menuItems = {
+            100: { nome: "Cachorro quente", preco: 1.70 },
+            101: { nome: "Bauru Simples", preco: 2.80 },
+            102: { nome: "Bauru com ovo", preco: 2.60 },
+            103: { nome: "Hamburguer", preco: 2.40 },
+            104: { nome: "Cheeseburguer", preco: 2.50 },
+            105: { nome: "Refrigerante", preco: 1.00 }
+        };
+
+        let totalCompra = 0; // Variável para armazenar o valor total da compra
+
+        while (true) {
+            // Exibe o menu e solicita a escolha
+            let menu = parseInt(prompt(
+                "            *Menu*\nDigite o número do seu pedido:\n" +
+                "100: Cachorro quente R$ 1,70\n" +
+                "101: Bauru Simples R$ 2,80\n" +
+                "102: Bauru com ovo R$ 2,60\n" +
+                "103: Hamburguer R$ 2,40\n" +
+                "104: Cheeseburguer R$ 2,50\n" +
+                "105: Refrigerante R$ 1,00\n" +
+                "Digite 0 para finalizar a compra."
+            ));
+
+            if (menu === 0) {
+                break; // Sai do loop quando o cliente escolhe finalizar
+            }
+
+            // Verifica se a escolha é válida
+            if (menuItems[menu]) {
+                let quantidade = parseInt(prompt("Qual a quantidade desejada de " + menuItems[menu].nome + "?"));
+
+                if (quantidade > 0) {
+                    // Calcula o preço total para esse item
+                    let precoTotal = menuItems[menu].preco * quantidade;
+                    totalCompra += precoTotal; // Adiciona o valor à compra total
+
+                    // Exibe o pedido
+                    alert("Você comprou " + quantidade + " " + menuItems[menu].nome + "(s), pagando o valor de R$ " + precoTotal.toFixed(2));
+                } else {
+                    alert("Quantidade inválida!");
+                }
+            } else {
+                alert("Escolha uma das opções válidas!");
+            }
+        }
+
+        // Exibe o valor total da compra
+        if (totalCompra > 0) {
+            alert("Total da compra: R$ " + totalCompra.toFixed(2));
+        } else {
+            alert("Você não fez nenhuma compra.");
+        }
+    </script>
+</body>
+</html>
